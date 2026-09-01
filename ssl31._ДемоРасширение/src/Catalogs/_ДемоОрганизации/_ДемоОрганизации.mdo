@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="b689ea96-4c4c-4fcd-8312-e27a825fe4aa">
+  <producedTypes>
+    <objectType typeId="d528def8-31f4-4b81-9a43-767f01eea898" valueTypeId="bd51af3b-c511-40b5-9031-35918639b606"/>
+    <refType typeId="1bf7e0fa-67f7-4c90-b405-0d5d2e9ef21c" valueTypeId="818a29dd-5f2d-4c4e-ab0e-dc6bccc01e06"/>
+    <selectionType typeId="a073eec4-4516-4b82-bc17-aab67c4be515" valueTypeId="4a2e3677-e6d7-4032-9a66-654c2b6c037e"/>
+    <listType typeId="6a08b4e0-73c4-4fca-9c6b-464416fcff7b" valueTypeId="39bb172e-ce5d-460f-a93f-1ccc3c4aac4a"/>
+    <managerType typeId="2328fd4c-47ae-48c7-abe3-e7519943c60c" valueTypeId="4601059f-9565-4a9a-8f40-0cc2c5d6da86"/>
+  </producedTypes>
+  <name>_ДемоОрганизации</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension"/>
+</mdclass:Catalog>

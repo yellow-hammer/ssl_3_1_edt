@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="2cb40f25-2c61-41e9-9689-e1e4c639e8cb">
+  <producedTypes>
+    <objectType typeId="7a74f887-c265-4ce1-ada8-b56fabdb05fe" valueTypeId="29e62182-abc4-4845-805d-03ad1647480f"/>
+    <refType typeId="5aa1e03d-4e6c-466a-b4d0-e7acaa599773" valueTypeId="f7e76c5c-892b-4146-972e-8231cdd9763c"/>
+    <selectionType typeId="4ce96904-f6ed-4013-87cd-0812e1f3039d" valueTypeId="d8cd3176-ffa8-44fc-bfa3-199cf0fe601a"/>
+    <listType typeId="682fce82-8ae4-40fd-ae4a-6f94153d51a3" valueTypeId="c11c79d0-91fd-406c-9181-fd0312afea8f"/>
+    <managerType typeId="65794464-6b20-4d78-a4fd-95a6ffb71d82" valueTypeId="ae6354c9-26f0-4c76-accc-b5d2e35de2df"/>
+  </producedTypes>
+  <name>_ДемоНоменклатура</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension"/>
+  <attributes uuid="2963fe96-d784-43d1-b916-e6e7a4bed9fc">
+    <name>_ДемоКлючСинхронизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Демо: Ключ синхронизации</value>
+    </synonym>
+    <comment>Для плана обмена с системой установки цен (из расширения)</comment>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <synonym>Extended</synonym>
+      <choiceForm>Extended</choiceForm>
+    </extension>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

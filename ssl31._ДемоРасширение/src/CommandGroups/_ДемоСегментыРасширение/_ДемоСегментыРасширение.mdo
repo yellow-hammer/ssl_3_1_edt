@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommandGroup xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b45bd305-4d47-4056-8818-6611eda107fa">
+  <name>_ДемоСегментыРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Сегменты (из расширения)</value>
+  </synonym>
+  <representation>Auto</representation>
+</mdclass:CommandGroup>

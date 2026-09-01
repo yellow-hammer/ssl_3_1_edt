@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="d7b47b2b-a825-491e-9f12-c9f578e2a692">
+  <name>_ДемоЧтениеСкладскихДокументов</name>
+  <comment>Добавлены права на отчет _ДемоОстаткиТоваровРасширение</comment>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:RoleExtension">
+    <rights>Extended</rights>
+  </extension>
+</mdclass:Role>

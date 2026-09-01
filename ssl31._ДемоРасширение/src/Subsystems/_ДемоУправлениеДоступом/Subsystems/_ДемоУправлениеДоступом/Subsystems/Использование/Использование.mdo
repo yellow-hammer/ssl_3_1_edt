@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="155263d0-8380-4a70-8b90-82a9a0b3c405">
+  <name>Использование</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:SubsystemExtension">
+    <content>Extended</content>
+    <commandInterface>Extended</commandInterface>
+  </extension>
+  <content>InformationRegister._ДемоСегментыПартнеровРасширение</content>
+  <content>Catalog._ДемоСегментыПартнеровРасширение</content>
+  <parentSubsystem>Subsystem._ДемоУправлениеДоступом.Subsystem._ДемоУправлениеДоступом</parentSubsystem>
+</mdclass:Subsystem>

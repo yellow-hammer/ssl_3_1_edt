@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="6a5f6dac-3040-4142-b853-482f745e1e4b">
+  <name>_ДемоПустоеРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Пустое расширение</value>
+  </synonym>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ConfigurationExtension"/>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="3bb3cd0d-9a33-4347-a696-a171c77bee19"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="8296dfc5-67d8-48ef-b21c-7b06c8e545e4"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="4a1f5c6c-c42c-43c1-b801-9c53e92d6957"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="3b1c5658-5677-4e93-ad9f-bf0ec356bb66"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="33c165da-f085-4991-a0b5-5d0e71f5045a"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="7a6b13fa-6f27-4305-b440-4876ed612214"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="0da8a743-2bd1-49dc-9c2d-14cf2cb574a9"/>
+  <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
+  <namePrefix>_ДемоПустоеРасширение</namePrefix>
+  <configurationExtensionCompatibilityMode>8.3.21</configurationExtensionCompatibilityMode>
+  <configurationExtensionPurpose>Customization</configurationExtensionPurpose>
+  <scriptVariant>Russian</scriptVariant>
+  <vendor>Фирма &quot;1С&quot;</vendor>
+  <version>1.0.1.1</version>
+  <copyright>
+    <key>ru</key>
+    <value>Copyright © ООО &quot;1С-Софт&quot;, 2009-2019. Все права защищены</value>
+  </copyright>
+  <vendorInformationAddress>
+    <key>ru</key>
+    <value>http://www.1c.ru</value>
+  </vendorInformationAddress>
+  <languages uuid="efc14f05-e4ab-4235-8c63-9082143c3ca9">
+    <name>Русский</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:LanguageExtension"/>
+  </languages>
+</mdclass:Configuration>

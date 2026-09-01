@@ -1,0 +1,4450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://mcommunicator.ru/M2M"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://mcommunicator.ru/M2M"
+		xmlns:xsd2="http://mcommunicator.ru/M2M/AbstractTypes"
+		xmlns:xsd3="http://schemas.xmlsoap.org/soap/encoding/"
+		targetNamespace="http://mcommunicator.ru/M2M">
+	<types>
+		<s:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:s="http://www.w3.org/2001/XMLSchema"
+				xmlns:s1="http://mcommunicator.ru/M2M/AbstractTypes"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				elementFormDefault="qualified"
+				targetNamespace="http://mcommunicator.ru/M2M">
+			<s:element name="SendMessage">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msid"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="SendMessageResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageAtDate">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msid"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:dateTime"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageAtDateResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="SendMessageAtDateResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageWithValidityPeriod">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msid"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageWithValidityPeriodResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="SendMessageWithValidityPeriodResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageToMultipleSubscribers">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfString">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="string"
+							nillable="true"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="SendMessageToMultipleSubscribersResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessageToMultipleSubscribersResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfSendMessageIDs">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="SendMessageIDs"
+							nillable="true"
+							type="xsd1:SendMessageIDs"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SendMessageIDs">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageID"
+							type="s:long"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="SendMessageToMultipleSubscribersAtDate">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:dateTime"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageToMultipleSubscribersAtDateResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessageToMultipleSubscribersAtDateResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessages">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessagesResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesAtDate">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:dateTime"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesAtDateResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessagesAtDateResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesWithValidityPeriod">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesWithValidityPeriodResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessagesWithValidityPeriodResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesAtDateWithValidityPeriod">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:dateTime"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesAtDateWithValidityPeriodResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessagesAtDateWithValidityPeriodResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendVariousMessages">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msidsAndMessages"
+								type="xsd1:ArrayOfSubmit"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfSubmit">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="Submit"
+							nillable="true"
+							type="xsd1:Submit"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Submit">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Message"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="SendVariousMessagesResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendVariousMessagesResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendViberMessages">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msidsAndMessages"
+								type="xsd1:ArrayOfSubmit"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="scheduledSendDate"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="useViberOnly"
+								type="s:boolean"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendViberMessagesResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendViberMessagesResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessagesWithForm">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="FormSubmits"
+								type="xsd1:ArrayOfFormSubmit"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="formTemplateID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfFormSubmit">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="FormSubmit"
+							nillable="true"
+							type="xsd1:FormSubmit"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FormSubmit">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="SendMessagesWithFormResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="SendMessagesWithFormResult"
+								type="xsd1:ArrayOfSendMessageIDs"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMessageStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="messageID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMessageStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMessageStatusResult"
+								type="xsd1:ArrayOfDeliveryInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfDeliveryInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="DeliveryInfo"
+							nillable="true"
+							type="xsd1:DeliveryInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="DeliveryInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryStatus"
+							type="xsd1:DeliveryStatus"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryDate"
+							type="s:dateTime"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="UserDeliveryDate"
+							nillable="true"
+							type="s:dateTime"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="PartCount"
+							type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="DeliveryStatus">
+				<s:restriction base="s:string">
+					<s:enumeration value="Pending"/>
+					<s:enumeration value="Sending"/>
+					<s:enumeration value="Sent"/>
+					<s:enumeration value="NotSent"/>
+					<s:enumeration value="Delivered"/>
+					<s:enumeration value="NotDelivered"/>
+					<s:enumeration value="TimedOut"/>
+					<s:enumeration value="Error"/>
+					<s:enumeration value="Cancelled"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="GetMessagesStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="messageIDs"
+								type="xsd1:ArrayOfLong"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfLong">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="long"
+							type="s:long"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetMessagesStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMessagesStatusResult"
+								type="xsd1:ArrayOfMessageStatusWithID"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfMessageStatusWithID">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MessageStatusWithID"
+							nillable="true"
+							type="xsd1:MessageStatusWithID"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MessageStatusWithID">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Delivery"
+							type="xsd1:ArrayOfDeliveryInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetViberMessagesStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="messageIDs"
+								type="xsd1:ArrayOfLong"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetViberMessagesStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetViberMessagesStatusResult"
+								type="xsd1:ArrayOfViberMessageStatusWithID"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfViberMessageStatusWithID">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="ViberMessageStatusWithID"
+							nillable="true"
+							type="xsd1:ViberMessageStatusWithID"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ViberMessageStatusWithID">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Delivery"
+							type="xsd1:ArrayOfViberDeliveryInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfViberDeliveryInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="ViberDeliveryInfo"
+							nillable="true"
+							type="xsd1:ViberDeliveryInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ViberDeliveryInfo"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:DeliveryInfo">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="1"
+									name="ViberStatus"
+									type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:element name="GetMessagesInfo">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="messageIDs"
+								type="xsd1:ArrayOfLong"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMessagesInfoResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMessagesInfoResult"
+								type="xsd1:ArrayOfMessageInfoExWithID"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfMessageInfoExWithID">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MessageInfoExWithID"
+							nillable="true"
+							type="xsd1:MessageInfoExWithID"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MessageInfoExWithID">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="MessageInfo"
+							type="xsd1:ArrayOfMessageInfoEx"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfMessageInfoEx">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MessageInfoEx"
+							nillable="true"
+							type="xsd1:MessageInfoEx"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MessageInfoEx"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:DeliveryInfo">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="1"
+									name="TrafficPatternType"
+									type="s:string"/>
+							<s:element minOccurs="0"
+									maxOccurs="1"
+									name="Cost"
+									type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:element name="GetMessages">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="messageType"
+								type="xsd1:RequestMessageType"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="subscriberMsids"
+								type="xsd1:ArrayOfString"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="DateFrom"
+								type="s:dateTime"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="DateTo"
+								type="s:dateTime"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:simpleType name="RequestMessageType">
+				<s:restriction base="s:string">
+					<s:enumeration value="All"/>
+					<s:enumeration value="MO"/>
+					<s:enumeration value="MT"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="GetMessagesResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMessagesResult"
+								type="xsd1:ArrayOfMessageInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfMessageInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MessageInfo"
+							nillable="true"
+							type="xsd1:MessageInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MessageInfo">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageID"
+							type="s:long"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="CreationDate"
+							type="s:dateTime"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="SenderMsid"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="SenderName"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="DeliveryInfo"
+							type="xsd1:ArrayOfDeliveryInfoExt"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MessageType"
+							type="xsd1:MessageType"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="MessageText"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfDeliveryInfoExt">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="DeliveryInfoExt"
+							nillable="true"
+							type="xsd1:DeliveryInfoExt"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="DeliveryInfoExt">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="TargetMsid"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryStatus"
+							type="xsd1:DeliveryStatus"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryDate"
+							type="s:dateTime"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="TargetName"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="UserDeliveryDate"
+							nillable="true"
+							type="s:dateTime"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="MessageType">
+				<s:restriction base="s:string">
+					<s:enumeration value="MO"/>
+					<s:enumeration value="MT"/>
+					<s:enumeration value="Mailing"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="GetStatistics">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetStatisticsResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetStatisticsResult"
+								type="xsd1:StatisticsInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="StatisticsInfo">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Year"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Month"
+							type="s:unsignedByte"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="PacketSize"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="IncludedSMS"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ExtraSMS"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Remainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ExternalPacketSize"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ExternalIncludedSms"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ExternalExtraSms"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ExternalReminder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="GeneralPacketSize"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="GeneralIncludedSms"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="GeneralExtraSms"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="GeneralReminder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MTSRemainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MegafonRemainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="BeelineRemainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="RostelecomRemainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Tele2Remainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MotivRemainder"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MtsTransactional"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MegafonTransactional"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="BeelineTransactional"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Tele2Transactional"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MtsService"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="MegafonService"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="BeelineService"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Tele2Service"
+							type="s:int"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="TotalBilledSms"
+							type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="CreateMailingList">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="name"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="contacts"
+								type="xsd1:ArrayOfMailingListContact"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfMailingListContact">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MailingListContact"
+							nillable="true"
+							type="xsd1:MailingListContact"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MailingListContact">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Attributes"
+							type="xsd1:ArrayOfMailingListAttribute"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfMailingListAttribute">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="MailingListAttribute"
+							nillable="true"
+							type="xsd1:MailingListAttribute"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MailingListAttribute">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Value"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="CreateMailingListResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="CreateMailingListResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMailingLists">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMailingListsResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMailingListsResult"
+								type="xsd1:ArrayOfResultMailingList"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfResultMailingList">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="ResultMailingList"
+							nillable="true"
+							type="xsd1:ResultMailingList"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ResultMailingList">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="DeleteMailingLists">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="mailingListIDs"
+								type="xsd1:ArrayOfLong"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DeleteMailingListsResponse">
+				<s:complexType/>
+			</s:element>
+			<s:element name="GetMailingListContacts">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="mailingListId"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMailingListContactsResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMailingListContactsResult"
+								type="xsd1:ArrayOfMailingListContact"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SetMailingListContacts">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="mailingListId"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="contacts"
+								type="xsd1:ArrayOfMailingListContact"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SetMailingListContactsResponse">
+				<s:complexType/>
+			</s:element>
+			<s:element name="AddUser">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userName"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userMSID"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userEmail"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="webAccessEnabled"
+								type="s:boolean"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="accessLevel"
+								type="xsd1:AccessLevel"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="userGroupId"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:simpleType name="AccessLevel">
+				<s:restriction base="s:string">
+					<s:enumeration value="Administrator"/>
+					<s:enumeration value="Operator"/>
+					<s:enumeration value="BaseUser"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="AddUserResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="AddUserResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetGroups">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetGroupsResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetGroupsResult"
+								type="xsd1:ArrayOfSubscriberGroupInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfSubscriberGroupInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="SubscriberGroupInfo"
+							nillable="true"
+							type="xsd1:SubscriberGroupInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SubscriberGroupInfo">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Color"
+							type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetUsers">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetUsersResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetUsersResult"
+								type="xsd1:ArrayOfUserInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfUserInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="UserInfo"
+							nillable="true"
+							type="xsd1:UserInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Email"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="GroupID"
+							type="s:long"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="WebAccessEnabled"
+							nillable="true"
+							type="s:boolean"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="AccessLevel"
+							nillable="true"
+							type="xsd1:AccessLevel"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="DeleteUser">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msid"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DeleteUserResponse">
+				<s:complexType/>
+			</s:element>
+			<s:element name="CreateMailing">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="name"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="mailingListID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="text"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="date"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="validityPeriod"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="CreateMailingResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="CreateMailingResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMailingMessagesStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="mailingID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMailingMessagesStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMailingMessagesStatusResult"
+								type="xsd1:ArrayOfDeliveryInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetCompanyMode">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetCompanyModeResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetCompanyModeResult"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetBalance">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetBalanceResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetBalanceResult"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetPartCount">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="text"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetPartCountResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="GetPartCountResult"
+								type="s:int"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetFormTemplates">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetFormTemplatesResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetFormTemplatesResult"
+								type="xsd1:ArrayOfFormTemplate"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfFormTemplate">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="FormTemplate"
+							nillable="true"
+							type="xsd1:FormTemplate"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FormTemplate">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="ID"
+							type="s:long"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Name"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="GetForms">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="from"
+								type="s:dateTime"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="to"
+								type="s:dateTime"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="formTemplateID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetFormsResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetFormsResult"
+								type="xsd1:ArrayOfForm"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfForm">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="Form"
+							nillable="true"
+							type="xsd1:Form"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Form">
+				<s:sequence>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="FormTemplateID"
+							type="s:long"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="Date"
+							type="s:dateTime"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Items"
+							type="xsd1:ArrayOfFormItem"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArrayOfFormItem">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="FormItem"
+							nillable="true"
+							type="xsd1:FormItem"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FormItem">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Key"
+							type="s:string"/>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Value"
+							type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="long"
+					type="s:long"/>
+			<s:element name="ArrayOfSendMessageIDs"
+					nillable="true"
+					type="xsd1:ArrayOfSendMessageIDs"/>
+			<s:element name="ArrayOfDeliveryInfo"
+					nillable="true"
+					type="xsd1:ArrayOfDeliveryInfo"/>
+			<s:element name="ArrayOfMessageStatusWithID"
+					nillable="true"
+					type="xsd1:ArrayOfMessageStatusWithID"/>
+			<s:element name="ArrayOfViberMessageStatusWithID"
+					nillable="true"
+					type="xsd1:ArrayOfViberMessageStatusWithID"/>
+			<s:element name="ArrayOfMessageInfoExWithID"
+					nillable="true"
+					type="xsd1:ArrayOfMessageInfoExWithID"/>
+			<s:element name="ArrayOfMessageInfo"
+					nillable="true"
+					type="xsd1:ArrayOfMessageInfo"/>
+			<s:element name="StatisticsInfo"
+					nillable="true"
+					type="xsd1:StatisticsInfo"/>
+			<s:element name="ArrayOfResultMailingList"
+					nillable="true"
+					type="xsd1:ArrayOfResultMailingList"/>
+			<s:element name="ArrayOfMailingListContact"
+					nillable="true"
+					type="xsd1:ArrayOfMailingListContact"/>
+			<s:element name="ArrayOfSubscriberGroupInfo"
+					nillable="true"
+					type="xsd1:ArrayOfSubscriberGroupInfo"/>
+			<s:element name="ArrayOfUserInfo"
+					nillable="true"
+					type="xsd1:ArrayOfUserInfo"/>
+			<s:element name="string"
+					nillable="true"
+					type="s:string"/>
+			<s:element name="int"
+					type="s:int"/>
+			<s:element name="ArrayOfFormTemplate"
+					nillable="true"
+					type="xsd1:ArrayOfFormTemplate"/>
+			<s:element name="ArrayOfForm"
+					nillable="true"
+					type="xsd1:ArrayOfForm"/>
+		</s:schema>
+		<s:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:s="http://www.w3.org/2001/XMLSchema"
+				xmlns:s1="http://mcommunicator.ru/M2M/AbstractTypes"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+				xmlns:tns="http://mcommunicator.ru/M2M/AbstractTypes"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				targetNamespace="http://mcommunicator.ru/M2M/AbstractTypes">
+			<s:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+			<s:complexType name="StringArray"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:restriction base="xsd3:Array">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="String"
+									type="s:string"/>
+						</s:sequence>
+					</s:restriction>
+				</s:complexContent>
+			</s:complexType>
+		</s:schema>
+	</types>
+	<message name="SendMessageSoapIn">
+		<part name="parameters"
+				element="tns:SendMessage"/>
+	</message>
+	<message name="SendMessageSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageResponse"/>
+	</message>
+	<message name="SendMessageAtDateSoapIn">
+		<part name="parameters"
+				element="tns:SendMessageAtDate"/>
+	</message>
+	<message name="SendMessageAtDateSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageAtDateResponse"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodSoapIn">
+		<part name="parameters"
+				element="tns:SendMessageWithValidityPeriod"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageWithValidityPeriodResponse"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersSoapIn">
+		<part name="parameters"
+				element="tns:SendMessageToMultipleSubscribers"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageToMultipleSubscribersResponse"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateSoapIn">
+		<part name="parameters"
+				element="tns:SendMessageToMultipleSubscribersAtDate"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageToMultipleSubscribersAtDateResponse"/>
+	</message>
+	<message name="SendMessagesSoapIn">
+		<part name="parameters"
+				element="tns:SendMessages"/>
+	</message>
+	<message name="SendMessagesSoapOut">
+		<part name="parameters"
+				element="tns:SendMessagesResponse"/>
+	</message>
+	<message name="SendMessagesAtDateSoapIn">
+		<part name="parameters"
+				element="tns:SendMessagesAtDate"/>
+	</message>
+	<message name="SendMessagesAtDateSoapOut">
+		<part name="parameters"
+				element="tns:SendMessagesAtDateResponse"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodSoapIn">
+		<part name="parameters"
+				element="tns:SendMessagesWithValidityPeriod"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodSoapOut">
+		<part name="parameters"
+				element="tns:SendMessagesWithValidityPeriodResponse"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodSoapIn">
+		<part name="parameters"
+				element="tns:SendMessagesAtDateWithValidityPeriod"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodSoapOut">
+		<part name="parameters"
+				element="tns:SendMessagesAtDateWithValidityPeriodResponse"/>
+	</message>
+	<message name="SendVariousMessagesSoapIn">
+		<part name="parameters"
+				element="tns:SendVariousMessages"/>
+	</message>
+	<message name="SendVariousMessagesSoapOut">
+		<part name="parameters"
+				element="tns:SendVariousMessagesResponse"/>
+	</message>
+	<message name="SendViberMessagesSoapIn">
+		<part name="parameters"
+				element="tns:SendViberMessages"/>
+	</message>
+	<message name="SendViberMessagesSoapOut">
+		<part name="parameters"
+				element="tns:SendViberMessagesResponse"/>
+	</message>
+	<message name="SendMessagesWithFormSoapIn">
+		<part name="parameters"
+				element="tns:SendMessagesWithForm"/>
+	</message>
+	<message name="SendMessagesWithFormSoapOut">
+		<part name="parameters"
+				element="tns:SendMessagesWithFormResponse"/>
+	</message>
+	<message name="GetMessageStatusSoapIn">
+		<part name="parameters"
+				element="tns:GetMessageStatus"/>
+	</message>
+	<message name="GetMessageStatusSoapOut">
+		<part name="parameters"
+				element="tns:GetMessageStatusResponse"/>
+	</message>
+	<message name="GetMessagesStatusSoapIn">
+		<part name="parameters"
+				element="tns:GetMessagesStatus"/>
+	</message>
+	<message name="GetMessagesStatusSoapOut">
+		<part name="parameters"
+				element="tns:GetMessagesStatusResponse"/>
+	</message>
+	<message name="GetViberMessagesStatusSoapIn">
+		<part name="parameters"
+				element="tns:GetViberMessagesStatus"/>
+	</message>
+	<message name="GetViberMessagesStatusSoapOut">
+		<part name="parameters"
+				element="tns:GetViberMessagesStatusResponse"/>
+	</message>
+	<message name="GetMessagesInfoSoapIn">
+		<part name="parameters"
+				element="tns:GetMessagesInfo"/>
+	</message>
+	<message name="GetMessagesInfoSoapOut">
+		<part name="parameters"
+				element="tns:GetMessagesInfoResponse"/>
+	</message>
+	<message name="GetMessagesSoapIn">
+		<part name="parameters"
+				element="tns:GetMessages"/>
+	</message>
+	<message name="GetMessagesSoapOut">
+		<part name="parameters"
+				element="tns:GetMessagesResponse"/>
+	</message>
+	<message name="GetStatisticsSoapIn">
+		<part name="parameters"
+				element="tns:GetStatistics"/>
+	</message>
+	<message name="GetStatisticsSoapOut">
+		<part name="parameters"
+				element="tns:GetStatisticsResponse"/>
+	</message>
+	<message name="CreateMailingListSoapIn">
+		<part name="parameters"
+				element="tns:CreateMailingList"/>
+	</message>
+	<message name="CreateMailingListSoapOut">
+		<part name="parameters"
+				element="tns:CreateMailingListResponse"/>
+	</message>
+	<message name="GetMailingListsSoapIn">
+		<part name="parameters"
+				element="tns:GetMailingLists"/>
+	</message>
+	<message name="GetMailingListsSoapOut">
+		<part name="parameters"
+				element="tns:GetMailingListsResponse"/>
+	</message>
+	<message name="DeleteMailingListsSoapIn">
+		<part name="parameters"
+				element="tns:DeleteMailingLists"/>
+	</message>
+	<message name="DeleteMailingListsSoapOut">
+		<part name="parameters"
+				element="tns:DeleteMailingListsResponse"/>
+	</message>
+	<message name="GetMailingListContactsSoapIn">
+		<part name="parameters"
+				element="tns:GetMailingListContacts"/>
+	</message>
+	<message name="GetMailingListContactsSoapOut">
+		<part name="parameters"
+				element="tns:GetMailingListContactsResponse"/>
+	</message>
+	<message name="SetMailingListContactsSoapIn">
+		<part name="parameters"
+				element="tns:SetMailingListContacts"/>
+	</message>
+	<message name="SetMailingListContactsSoapOut">
+		<part name="parameters"
+				element="tns:SetMailingListContactsResponse"/>
+	</message>
+	<message name="AddUserSoapIn">
+		<part name="parameters"
+				element="tns:AddUser"/>
+	</message>
+	<message name="AddUserSoapOut">
+		<part name="parameters"
+				element="tns:AddUserResponse"/>
+	</message>
+	<message name="GetGroupsSoapIn">
+		<part name="parameters"
+				element="tns:GetGroups"/>
+	</message>
+	<message name="GetGroupsSoapOut">
+		<part name="parameters"
+				element="tns:GetGroupsResponse"/>
+	</message>
+	<message name="GetUsersSoapIn">
+		<part name="parameters"
+				element="tns:GetUsers"/>
+	</message>
+	<message name="GetUsersSoapOut">
+		<part name="parameters"
+				element="tns:GetUsersResponse"/>
+	</message>
+	<message name="DeleteUserSoapIn">
+		<part name="parameters"
+				element="tns:DeleteUser"/>
+	</message>
+	<message name="DeleteUserSoapOut">
+		<part name="parameters"
+				element="tns:DeleteUserResponse"/>
+	</message>
+	<message name="CreateMailingSoapIn">
+		<part name="parameters"
+				element="tns:CreateMailing"/>
+	</message>
+	<message name="CreateMailingSoapOut">
+		<part name="parameters"
+				element="tns:CreateMailingResponse"/>
+	</message>
+	<message name="GetMailingMessagesStatusSoapIn">
+		<part name="parameters"
+				element="tns:GetMailingMessagesStatus"/>
+	</message>
+	<message name="GetMailingMessagesStatusSoapOut">
+		<part name="parameters"
+				element="tns:GetMailingMessagesStatusResponse"/>
+	</message>
+	<message name="GetCompanyModeSoapIn">
+		<part name="parameters"
+				element="tns:GetCompanyMode"/>
+	</message>
+	<message name="GetCompanyModeSoapOut">
+		<part name="parameters"
+				element="tns:GetCompanyModeResponse"/>
+	</message>
+	<message name="GetBalanceSoapIn">
+		<part name="parameters"
+				element="tns:GetBalance"/>
+	</message>
+	<message name="GetBalanceSoapOut">
+		<part name="parameters"
+				element="tns:GetBalanceResponse"/>
+	</message>
+	<message name="GetPartCountSoapIn">
+		<part name="parameters"
+				element="tns:GetPartCount"/>
+	</message>
+	<message name="GetPartCountSoapOut">
+		<part name="parameters"
+				element="tns:GetPartCountResponse"/>
+	</message>
+	<message name="GetFormTemplatesSoapIn">
+		<part name="parameters"
+				element="tns:GetFormTemplates"/>
+	</message>
+	<message name="GetFormTemplatesSoapOut">
+		<part name="parameters"
+				element="tns:GetFormTemplatesResponse"/>
+	</message>
+	<message name="GetFormsSoapIn">
+		<part name="parameters"
+				element="tns:GetForms"/>
+	</message>
+	<message name="GetFormsSoapOut">
+		<part name="parameters"
+				element="tns:GetFormsResponse"/>
+	</message>
+	<message name="SendMessageHttpGetIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageAtDateHttpGetIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageAtDateHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodHttpGetIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesAtDateHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesAtDateHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodHttpGetIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="GetMessageStatusHttpGetIn">
+		<part name="messageID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessageStatusHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<message name="GetMessagesStatusHttpGetIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesStatusHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageStatusWithID"/>
+	</message>
+	<message name="GetViberMessagesStatusHttpGetIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetViberMessagesStatusHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfViberMessageStatusWithID"/>
+	</message>
+	<message name="GetMessagesInfoHttpGetIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesInfoHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageInfoExWithID"/>
+	</message>
+	<message name="GetMessagesHttpGetIn">
+		<part name="messageType"
+				type="xsd:string"/>
+		<part name="subscriberMsids"
+				type="xsd2:StringArray"/>
+		<part name="DateFrom"
+				type="xsd:string"/>
+		<part name="DateTo"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageInfo"/>
+	</message>
+	<message name="GetStatisticsHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetStatisticsHttpGetOut">
+		<part name="Body"
+				element="tns:StatisticsInfo"/>
+	</message>
+	<message name="GetMailingListsHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingListsHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfResultMailingList"/>
+	</message>
+	<message name="DeleteMailingListsHttpGetIn">
+		<part name="mailingListIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="DeleteMailingListsHttpGetOut"/>
+	<message name="GetMailingListContactsHttpGetIn">
+		<part name="mailingListId"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingListContactsHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfMailingListContact"/>
+	</message>
+	<message name="AddUserHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="userName"
+				type="xsd:string"/>
+		<part name="userMSID"
+				type="xsd:string"/>
+		<part name="userEmail"
+				type="xsd:string"/>
+		<part name="webAccessEnabled"
+				type="xsd:string"/>
+		<part name="accessLevel"
+				type="xsd:string"/>
+		<part name="userGroupId"
+				type="xsd:string"/>
+	</message>
+	<message name="AddUserHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetGroupsHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetGroupsHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfSubscriberGroupInfo"/>
+	</message>
+	<message name="GetUsersHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetUsersHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfUserInfo"/>
+	</message>
+	<message name="DeleteUserHttpGetIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="DeleteUserHttpGetOut"/>
+	<message name="CreateMailingHttpGetIn">
+		<part name="name"
+				type="xsd:string"/>
+		<part name="mailingListID"
+				type="xsd:string"/>
+		<part name="text"
+				type="xsd:string"/>
+		<part name="date"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="CreateMailingHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetMailingMessagesStatusHttpGetIn">
+		<part name="mailingID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingMessagesStatusHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<message name="GetCompanyModeHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetCompanyModeHttpGetOut">
+		<part name="Body"
+				element="tns:string"/>
+	</message>
+	<message name="GetBalanceHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetBalanceHttpGetOut">
+		<part name="Body"
+				element="tns:string"/>
+	</message>
+	<message name="GetPartCountHttpGetIn">
+		<part name="text"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetPartCountHttpGetOut">
+		<part name="Body"
+				element="tns:int"/>
+	</message>
+	<message name="GetFormTemplatesHttpGetIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetFormTemplatesHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfFormTemplate"/>
+	</message>
+	<message name="GetFormsHttpGetIn">
+		<part name="from"
+				type="xsd:string"/>
+		<part name="to"
+				type="xsd:string"/>
+		<part name="formTemplateID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetFormsHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfForm"/>
+	</message>
+	<message name="SendMessageHttpPostIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageAtDateHttpPostIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageAtDateHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodHttpPostIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageWithValidityPeriodHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageToMultipleSubscribersAtDateHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesAtDateHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesAtDateHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesWithValidityPeriodHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodHttpPostIn">
+		<part name="msids"
+				type="xsd2:StringArray"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="scheduledSendDate"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessagesAtDateWithValidityPeriodHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSendMessageIDs"/>
+	</message>
+	<message name="GetMessageStatusHttpPostIn">
+		<part name="messageID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessageStatusHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<message name="GetMessagesStatusHttpPostIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesStatusHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageStatusWithID"/>
+	</message>
+	<message name="GetViberMessagesStatusHttpPostIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetViberMessagesStatusHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfViberMessageStatusWithID"/>
+	</message>
+	<message name="GetMessagesInfoHttpPostIn">
+		<part name="messageIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesInfoHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageInfoExWithID"/>
+	</message>
+	<message name="GetMessagesHttpPostIn">
+		<part name="messageType"
+				type="xsd:string"/>
+		<part name="subscriberMsids"
+				type="xsd2:StringArray"/>
+		<part name="DateFrom"
+				type="xsd:string"/>
+		<part name="DateTo"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessagesHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfMessageInfo"/>
+	</message>
+	<message name="GetStatisticsHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetStatisticsHttpPostOut">
+		<part name="Body"
+				element="tns:StatisticsInfo"/>
+	</message>
+	<message name="GetMailingListsHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingListsHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfResultMailingList"/>
+	</message>
+	<message name="DeleteMailingListsHttpPostIn">
+		<part name="mailingListIDs"
+				type="xsd2:StringArray"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="DeleteMailingListsHttpPostOut"/>
+	<message name="GetMailingListContactsHttpPostIn">
+		<part name="mailingListId"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingListContactsHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfMailingListContact"/>
+	</message>
+	<message name="AddUserHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+		<part name="userName"
+				type="xsd:string"/>
+		<part name="userMSID"
+				type="xsd:string"/>
+		<part name="userEmail"
+				type="xsd:string"/>
+		<part name="webAccessEnabled"
+				type="xsd:string"/>
+		<part name="accessLevel"
+				type="xsd:string"/>
+		<part name="userGroupId"
+				type="xsd:string"/>
+	</message>
+	<message name="AddUserHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetGroupsHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetGroupsHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfSubscriberGroupInfo"/>
+	</message>
+	<message name="GetUsersHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetUsersHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfUserInfo"/>
+	</message>
+	<message name="DeleteUserHttpPostIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="DeleteUserHttpPostOut"/>
+	<message name="CreateMailingHttpPostIn">
+		<part name="name"
+				type="xsd:string"/>
+		<part name="mailingListID"
+				type="xsd:string"/>
+		<part name="text"
+				type="xsd:string"/>
+		<part name="date"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="validityPeriod"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="CreateMailingHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetMailingMessagesStatusHttpPostIn">
+		<part name="mailingID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMailingMessagesStatusHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<message name="GetCompanyModeHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetCompanyModeHttpPostOut">
+		<part name="Body"
+				element="tns:string"/>
+	</message>
+	<message name="GetBalanceHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetBalanceHttpPostOut">
+		<part name="Body"
+				element="tns:string"/>
+	</message>
+	<message name="GetPartCountHttpPostIn">
+		<part name="text"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetPartCountHttpPostOut">
+		<part name="Body"
+				element="tns:int"/>
+	</message>
+	<message name="GetFormTemplatesHttpPostIn">
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetFormTemplatesHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfFormTemplate"/>
+	</message>
+	<message name="GetFormsHttpPostIn">
+		<part name="from"
+				type="xsd:string"/>
+		<part name="to"
+				type="xsd:string"/>
+		<part name="formTemplateID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetFormsHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfForm"/>
+	</message>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageSoapIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageSoapOut"/>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<input name="SendMessageAtDateRequest"
+					message="tns:SendMessageAtDateSoapIn"/>
+			<output name="SendMessageAtDateResponse"
+					message="tns:SendMessageAtDateSoapOut"/>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<input name="SendMessageWithValidityPeriodRequest"
+					message="tns:SendMessageWithValidityPeriodSoapIn"/>
+			<output name="SendMessageWithValidityPeriodResponse"
+					message="tns:SendMessageWithValidityPeriodSoapOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<input name="SendMessageToMultipleSubscribersRequest"
+					message="tns:SendMessageToMultipleSubscribersSoapIn"/>
+			<output name="SendMessageToMultipleSubscribersResponse"
+					message="tns:SendMessageToMultipleSubscribersSoapOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<input name="SendMessageToMultipleSubscribersAtDateRequest"
+					message="tns:SendMessageToMultipleSubscribersAtDateSoapIn"/>
+			<output name="SendMessageToMultipleSubscribersAtDateResponse"
+					message="tns:SendMessageToMultipleSubscribersAtDateSoapOut"/>
+		</operation>
+		<operation name="SendMessages">
+			<input name="SendMessagesRequest"
+					message="tns:SendMessagesSoapIn"/>
+			<output name="SendMessagesResponse"
+					message="tns:SendMessagesSoapOut"/>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<input name="SendMessagesAtDateRequest"
+					message="tns:SendMessagesAtDateSoapIn"/>
+			<output name="SendMessagesAtDateResponse"
+					message="tns:SendMessagesAtDateSoapOut"/>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<input name="SendMessagesWithValidityPeriodRequest"
+					message="tns:SendMessagesWithValidityPeriodSoapIn"/>
+			<output name="SendMessagesWithValidityPeriodResponse"
+					message="tns:SendMessagesWithValidityPeriodSoapOut"/>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<input name="SendMessagesAtDateWithValidityPeriodRequest"
+					message="tns:SendMessagesAtDateWithValidityPeriodSoapIn"/>
+			<output name="SendMessagesAtDateWithValidityPeriodResponse"
+					message="tns:SendMessagesAtDateWithValidityPeriodSoapOut"/>
+		</operation>
+		<operation name="SendVariousMessages">
+			<input name="SendVariousMessagesRequest"
+					message="tns:SendVariousMessagesSoapIn"/>
+			<output name="SendVariousMessagesResponse"
+					message="tns:SendVariousMessagesSoapOut"/>
+		</operation>
+		<operation name="SendViberMessages">
+			<input name="SendViberMessagesRequest"
+					message="tns:SendViberMessagesSoapIn"/>
+			<output name="SendViberMessagesResponse"
+					message="tns:SendViberMessagesSoapOut"/>
+		</operation>
+		<operation name="SendMessagesWithForm">
+			<input name="SendMessagesWithFormRequest"
+					message="tns:SendMessagesWithFormSoapIn"/>
+			<output name="SendMessagesWithFormResponse"
+					message="tns:SendMessagesWithFormSoapOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusSoapIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusSoapOut"/>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<input name="GetMessagesStatusRequest"
+					message="tns:GetMessagesStatusSoapIn"/>
+			<output name="GetMessagesStatusResponse"
+					message="tns:GetMessagesStatusSoapOut"/>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<input name="GetViberMessagesStatusRequest"
+					message="tns:GetViberMessagesStatusSoapIn"/>
+			<output name="GetViberMessagesStatusResponse"
+					message="tns:GetViberMessagesStatusSoapOut"/>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<input name="GetMessagesInfoRequest"
+					message="tns:GetMessagesInfoSoapIn"/>
+			<output name="GetMessagesInfoResponse"
+					message="tns:GetMessagesInfoSoapOut"/>
+		</operation>
+		<operation name="GetMessages">
+			<input name="GetMessagesRequest"
+					message="tns:GetMessagesSoapIn"/>
+			<output name="GetMessagesResponse"
+					message="tns:GetMessagesSoapOut"/>
+		</operation>
+		<operation name="GetStatistics">
+			<input name="GetStatisticsRequest"
+					message="tns:GetStatisticsSoapIn"/>
+			<output name="GetStatisticsResponse"
+					message="tns:GetStatisticsSoapOut"/>
+		</operation>
+		<operation name="CreateMailingList">
+			<input name="CreateMailingListRequest"
+					message="tns:CreateMailingListSoapIn"/>
+			<output name="CreateMailingListResponse"
+					message="tns:CreateMailingListSoapOut"/>
+		</operation>
+		<operation name="GetMailingLists">
+			<input name="GetMailingListsRequest"
+					message="tns:GetMailingListsSoapIn"/>
+			<output name="GetMailingListsResponse"
+					message="tns:GetMailingListsSoapOut"/>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<input name="DeleteMailingListsRequest"
+					message="tns:DeleteMailingListsSoapIn"/>
+			<output name="DeleteMailingListsResponse"
+					message="tns:DeleteMailingListsSoapOut"/>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<input name="GetMailingListContactsRequest"
+					message="tns:GetMailingListContactsSoapIn"/>
+			<output name="GetMailingListContactsResponse"
+					message="tns:GetMailingListContactsSoapOut"/>
+		</operation>
+		<operation name="SetMailingListContacts">
+			<input name="SetMailingListContactsRequest"
+					message="tns:SetMailingListContactsSoapIn"/>
+			<output name="SetMailingListContactsResponse"
+					message="tns:SetMailingListContactsSoapOut"/>
+		</operation>
+		<operation name="AddUser">
+			<input name="AddUserRequest"
+					message="tns:AddUserSoapIn"/>
+			<output name="AddUserResponse"
+					message="tns:AddUserSoapOut"/>
+		</operation>
+		<operation name="GetGroups">
+			<input name="GetGroupsRequest"
+					message="tns:GetGroupsSoapIn"/>
+			<output name="GetGroupsResponse"
+					message="tns:GetGroupsSoapOut"/>
+		</operation>
+		<operation name="GetUsers">
+			<input name="GetUsersRequest"
+					message="tns:GetUsersSoapIn"/>
+			<output name="GetUsersResponse"
+					message="tns:GetUsersSoapOut"/>
+		</operation>
+		<operation name="DeleteUser">
+			<input name="DeleteUserRequest"
+					message="tns:DeleteUserSoapIn"/>
+			<output name="DeleteUserResponse"
+					message="tns:DeleteUserSoapOut"/>
+		</operation>
+		<operation name="CreateMailing">
+			<input name="CreateMailingRequest"
+					message="tns:CreateMailingSoapIn"/>
+			<output name="CreateMailingResponse"
+					message="tns:CreateMailingSoapOut"/>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<input name="GetMailingMessagesStatusRequest"
+					message="tns:GetMailingMessagesStatusSoapIn"/>
+			<output name="GetMailingMessagesStatusResponse"
+					message="tns:GetMailingMessagesStatusSoapOut"/>
+		</operation>
+		<operation name="GetCompanyMode">
+			<input name="GetCompanyModeRequest"
+					message="tns:GetCompanyModeSoapIn"/>
+			<output name="GetCompanyModeResponse"
+					message="tns:GetCompanyModeSoapOut"/>
+		</operation>
+		<operation name="GetBalance">
+			<input name="GetBalanceRequest"
+					message="tns:GetBalanceSoapIn"/>
+			<output name="GetBalanceResponse"
+					message="tns:GetBalanceSoapOut"/>
+		</operation>
+		<operation name="GetPartCount">
+			<input name="GetPartCountRequest"
+					message="tns:GetPartCountSoapIn"/>
+			<output name="GetPartCountResponse"
+					message="tns:GetPartCountSoapOut"/>
+		</operation>
+		<operation name="GetFormTemplates">
+			<input name="GetFormTemplatesRequest"
+					message="tns:GetFormTemplatesSoapIn"/>
+			<output name="GetFormTemplatesResponse"
+					message="tns:GetFormTemplatesSoapOut"/>
+		</operation>
+		<operation name="GetForms">
+			<input name="GetFormsRequest"
+					message="tns:GetFormsSoapIn"/>
+			<output name="GetFormsResponse"
+					message="tns:GetFormsSoapOut"/>
+		</operation>
+	</portType>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageHttpGetIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageHttpGetOut"/>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<input name="SendMessageAtDateRequest"
+					message="tns:SendMessageAtDateHttpGetIn"/>
+			<output name="SendMessageAtDateResponse"
+					message="tns:SendMessageAtDateHttpGetOut"/>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<input name="SendMessageWithValidityPeriodRequest"
+					message="tns:SendMessageWithValidityPeriodHttpGetIn"/>
+			<output name="SendMessageWithValidityPeriodResponse"
+					message="tns:SendMessageWithValidityPeriodHttpGetOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<input name="SendMessageToMultipleSubscribersRequest"
+					message="tns:SendMessageToMultipleSubscribersHttpGetIn"/>
+			<output name="SendMessageToMultipleSubscribersResponse"
+					message="tns:SendMessageToMultipleSubscribersHttpGetOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<input name="SendMessageToMultipleSubscribersAtDateRequest"
+					message="tns:SendMessageToMultipleSubscribersAtDateHttpGetIn"/>
+			<output name="SendMessageToMultipleSubscribersAtDateResponse"
+					message="tns:SendMessageToMultipleSubscribersAtDateHttpGetOut"/>
+		</operation>
+		<operation name="SendMessages">
+			<input name="SendMessagesRequest"
+					message="tns:SendMessagesHttpGetIn"/>
+			<output name="SendMessagesResponse"
+					message="tns:SendMessagesHttpGetOut"/>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<input name="SendMessagesAtDateRequest"
+					message="tns:SendMessagesAtDateHttpGetIn"/>
+			<output name="SendMessagesAtDateResponse"
+					message="tns:SendMessagesAtDateHttpGetOut"/>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<input name="SendMessagesWithValidityPeriodRequest"
+					message="tns:SendMessagesWithValidityPeriodHttpGetIn"/>
+			<output name="SendMessagesWithValidityPeriodResponse"
+					message="tns:SendMessagesWithValidityPeriodHttpGetOut"/>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<input name="SendMessagesAtDateWithValidityPeriodRequest"
+					message="tns:SendMessagesAtDateWithValidityPeriodHttpGetIn"/>
+			<output name="SendMessagesAtDateWithValidityPeriodResponse"
+					message="tns:SendMessagesAtDateWithValidityPeriodHttpGetOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusHttpGetIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusHttpGetOut"/>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<input name="GetMessagesStatusRequest"
+					message="tns:GetMessagesStatusHttpGetIn"/>
+			<output name="GetMessagesStatusResponse"
+					message="tns:GetMessagesStatusHttpGetOut"/>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<input name="GetViberMessagesStatusRequest"
+					message="tns:GetViberMessagesStatusHttpGetIn"/>
+			<output name="GetViberMessagesStatusResponse"
+					message="tns:GetViberMessagesStatusHttpGetOut"/>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<input name="GetMessagesInfoRequest"
+					message="tns:GetMessagesInfoHttpGetIn"/>
+			<output name="GetMessagesInfoResponse"
+					message="tns:GetMessagesInfoHttpGetOut"/>
+		</operation>
+		<operation name="GetMessages">
+			<input name="GetMessagesRequest"
+					message="tns:GetMessagesHttpGetIn"/>
+			<output name="GetMessagesResponse"
+					message="tns:GetMessagesHttpGetOut"/>
+		</operation>
+		<operation name="GetStatistics">
+			<input name="GetStatisticsRequest"
+					message="tns:GetStatisticsHttpGetIn"/>
+			<output name="GetStatisticsResponse"
+					message="tns:GetStatisticsHttpGetOut"/>
+		</operation>
+		<operation name="GetMailingLists">
+			<input name="GetMailingListsRequest"
+					message="tns:GetMailingListsHttpGetIn"/>
+			<output name="GetMailingListsResponse"
+					message="tns:GetMailingListsHttpGetOut"/>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<input name="DeleteMailingListsRequest"
+					message="tns:DeleteMailingListsHttpGetIn"/>
+			<output name="DeleteMailingListsResponse"
+					message="tns:DeleteMailingListsHttpGetOut"/>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<input name="GetMailingListContactsRequest"
+					message="tns:GetMailingListContactsHttpGetIn"/>
+			<output name="GetMailingListContactsResponse"
+					message="tns:GetMailingListContactsHttpGetOut"/>
+		</operation>
+		<operation name="AddUser">
+			<input name="AddUserRequest"
+					message="tns:AddUserHttpGetIn"/>
+			<output name="AddUserResponse"
+					message="tns:AddUserHttpGetOut"/>
+		</operation>
+		<operation name="GetGroups">
+			<input name="GetGroupsRequest"
+					message="tns:GetGroupsHttpGetIn"/>
+			<output name="GetGroupsResponse"
+					message="tns:GetGroupsHttpGetOut"/>
+		</operation>
+		<operation name="GetUsers">
+			<input name="GetUsersRequest"
+					message="tns:GetUsersHttpGetIn"/>
+			<output name="GetUsersResponse"
+					message="tns:GetUsersHttpGetOut"/>
+		</operation>
+		<operation name="DeleteUser">
+			<input name="DeleteUserRequest"
+					message="tns:DeleteUserHttpGetIn"/>
+			<output name="DeleteUserResponse"
+					message="tns:DeleteUserHttpGetOut"/>
+		</operation>
+		<operation name="CreateMailing">
+			<input name="CreateMailingRequest"
+					message="tns:CreateMailingHttpGetIn"/>
+			<output name="CreateMailingResponse"
+					message="tns:CreateMailingHttpGetOut"/>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<input name="GetMailingMessagesStatusRequest"
+					message="tns:GetMailingMessagesStatusHttpGetIn"/>
+			<output name="GetMailingMessagesStatusResponse"
+					message="tns:GetMailingMessagesStatusHttpGetOut"/>
+		</operation>
+		<operation name="GetCompanyMode">
+			<input name="GetCompanyModeRequest"
+					message="tns:GetCompanyModeHttpGetIn"/>
+			<output name="GetCompanyModeResponse"
+					message="tns:GetCompanyModeHttpGetOut"/>
+		</operation>
+		<operation name="GetBalance">
+			<input name="GetBalanceRequest"
+					message="tns:GetBalanceHttpGetIn"/>
+			<output name="GetBalanceResponse"
+					message="tns:GetBalanceHttpGetOut"/>
+		</operation>
+		<operation name="GetPartCount">
+			<input name="GetPartCountRequest"
+					message="tns:GetPartCountHttpGetIn"/>
+			<output name="GetPartCountResponse"
+					message="tns:GetPartCountHttpGetOut"/>
+		</operation>
+		<operation name="GetFormTemplates">
+			<input name="GetFormTemplatesRequest"
+					message="tns:GetFormTemplatesHttpGetIn"/>
+			<output name="GetFormTemplatesResponse"
+					message="tns:GetFormTemplatesHttpGetOut"/>
+		</operation>
+		<operation name="GetForms">
+			<input name="GetFormsRequest"
+					message="tns:GetFormsHttpGetIn"/>
+			<output name="GetFormsResponse"
+					message="tns:GetFormsHttpGetOut"/>
+		</operation>
+	</portType>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageHttpPostIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageHttpPostOut"/>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<input name="SendMessageAtDateRequest"
+					message="tns:SendMessageAtDateHttpPostIn"/>
+			<output name="SendMessageAtDateResponse"
+					message="tns:SendMessageAtDateHttpPostOut"/>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<input name="SendMessageWithValidityPeriodRequest"
+					message="tns:SendMessageWithValidityPeriodHttpPostIn"/>
+			<output name="SendMessageWithValidityPeriodResponse"
+					message="tns:SendMessageWithValidityPeriodHttpPostOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<input name="SendMessageToMultipleSubscribersRequest"
+					message="tns:SendMessageToMultipleSubscribersHttpPostIn"/>
+			<output name="SendMessageToMultipleSubscribersResponse"
+					message="tns:SendMessageToMultipleSubscribersHttpPostOut"/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<input name="SendMessageToMultipleSubscribersAtDateRequest"
+					message="tns:SendMessageToMultipleSubscribersAtDateHttpPostIn"/>
+			<output name="SendMessageToMultipleSubscribersAtDateResponse"
+					message="tns:SendMessageToMultipleSubscribersAtDateHttpPostOut"/>
+		</operation>
+		<operation name="SendMessages">
+			<input name="SendMessagesRequest"
+					message="tns:SendMessagesHttpPostIn"/>
+			<output name="SendMessagesResponse"
+					message="tns:SendMessagesHttpPostOut"/>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<input name="SendMessagesAtDateRequest"
+					message="tns:SendMessagesAtDateHttpPostIn"/>
+			<output name="SendMessagesAtDateResponse"
+					message="tns:SendMessagesAtDateHttpPostOut"/>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<input name="SendMessagesWithValidityPeriodRequest"
+					message="tns:SendMessagesWithValidityPeriodHttpPostIn"/>
+			<output name="SendMessagesWithValidityPeriodResponse"
+					message="tns:SendMessagesWithValidityPeriodHttpPostOut"/>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<input name="SendMessagesAtDateWithValidityPeriodRequest"
+					message="tns:SendMessagesAtDateWithValidityPeriodHttpPostIn"/>
+			<output name="SendMessagesAtDateWithValidityPeriodResponse"
+					message="tns:SendMessagesAtDateWithValidityPeriodHttpPostOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusHttpPostIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusHttpPostOut"/>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<input name="GetMessagesStatusRequest"
+					message="tns:GetMessagesStatusHttpPostIn"/>
+			<output name="GetMessagesStatusResponse"
+					message="tns:GetMessagesStatusHttpPostOut"/>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<input name="GetViberMessagesStatusRequest"
+					message="tns:GetViberMessagesStatusHttpPostIn"/>
+			<output name="GetViberMessagesStatusResponse"
+					message="tns:GetViberMessagesStatusHttpPostOut"/>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<input name="GetMessagesInfoRequest"
+					message="tns:GetMessagesInfoHttpPostIn"/>
+			<output name="GetMessagesInfoResponse"
+					message="tns:GetMessagesInfoHttpPostOut"/>
+		</operation>
+		<operation name="GetMessages">
+			<input name="GetMessagesRequest"
+					message="tns:GetMessagesHttpPostIn"/>
+			<output name="GetMessagesResponse"
+					message="tns:GetMessagesHttpPostOut"/>
+		</operation>
+		<operation name="GetStatistics">
+			<input name="GetStatisticsRequest"
+					message="tns:GetStatisticsHttpPostIn"/>
+			<output name="GetStatisticsResponse"
+					message="tns:GetStatisticsHttpPostOut"/>
+		</operation>
+		<operation name="GetMailingLists">
+			<input name="GetMailingListsRequest"
+					message="tns:GetMailingListsHttpPostIn"/>
+			<output name="GetMailingListsResponse"
+					message="tns:GetMailingListsHttpPostOut"/>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<input name="DeleteMailingListsRequest"
+					message="tns:DeleteMailingListsHttpPostIn"/>
+			<output name="DeleteMailingListsResponse"
+					message="tns:DeleteMailingListsHttpPostOut"/>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<input name="GetMailingListContactsRequest"
+					message="tns:GetMailingListContactsHttpPostIn"/>
+			<output name="GetMailingListContactsResponse"
+					message="tns:GetMailingListContactsHttpPostOut"/>
+		</operation>
+		<operation name="AddUser">
+			<input name="AddUserRequest"
+					message="tns:AddUserHttpPostIn"/>
+			<output name="AddUserResponse"
+					message="tns:AddUserHttpPostOut"/>
+		</operation>
+		<operation name="GetGroups">
+			<input name="GetGroupsRequest"
+					message="tns:GetGroupsHttpPostIn"/>
+			<output name="GetGroupsResponse"
+					message="tns:GetGroupsHttpPostOut"/>
+		</operation>
+		<operation name="GetUsers">
+			<input name="GetUsersRequest"
+					message="tns:GetUsersHttpPostIn"/>
+			<output name="GetUsersResponse"
+					message="tns:GetUsersHttpPostOut"/>
+		</operation>
+		<operation name="DeleteUser">
+			<input name="DeleteUserRequest"
+					message="tns:DeleteUserHttpPostIn"/>
+			<output name="DeleteUserResponse"
+					message="tns:DeleteUserHttpPostOut"/>
+		</operation>
+		<operation name="CreateMailing">
+			<input name="CreateMailingRequest"
+					message="tns:CreateMailingHttpPostIn"/>
+			<output name="CreateMailingResponse"
+					message="tns:CreateMailingHttpPostOut"/>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<input name="GetMailingMessagesStatusRequest"
+					message="tns:GetMailingMessagesStatusHttpPostIn"/>
+			<output name="GetMailingMessagesStatusResponse"
+					message="tns:GetMailingMessagesStatusHttpPostOut"/>
+		</operation>
+		<operation name="GetCompanyMode">
+			<input name="GetCompanyModeRequest"
+					message="tns:GetCompanyModeHttpPostIn"/>
+			<output name="GetCompanyModeResponse"
+					message="tns:GetCompanyModeHttpPostOut"/>
+		</operation>
+		<operation name="GetBalance">
+			<input name="GetBalanceRequest"
+					message="tns:GetBalanceHttpPostIn"/>
+			<output name="GetBalanceResponse"
+					message="tns:GetBalanceHttpPostOut"/>
+		</operation>
+		<operation name="GetPartCount">
+			<input name="GetPartCountRequest"
+					message="tns:GetPartCountHttpPostIn"/>
+			<output name="GetPartCountResponse"
+					message="tns:GetPartCountHttpPostOut"/>
+		</operation>
+		<operation name="GetFormTemplates">
+			<input name="GetFormTemplatesRequest"
+					message="tns:GetFormTemplatesHttpPostIn"/>
+			<output name="GetFormTemplatesResponse"
+					message="tns:GetFormTemplatesHttpPostOut"/>
+		</operation>
+		<operation name="GetForms">
+			<input name="GetFormsRequest"
+					message="tns:GetFormsHttpPostIn"/>
+			<output name="GetFormsResponse"
+					message="tns:GetFormsHttpPostOut"/>
+		</operation>
+	</portType>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendMessage">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessage"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageAtDate"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageWithValidityPeriod"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageToMultipleSubscribers"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageToMultipleSubscribersAtDate"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessages">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessages"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesAtDate"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesWithValidityPeriod"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesAtDateWithValidityPeriod"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendVariousMessages">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendVariousMessages"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendViberMessages">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendViberMessages"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesWithForm">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesWithForm"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessageStatus">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessageStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessagesStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetViberMessagesStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessagesInfo"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessages">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessages"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetStatistics">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetStatistics"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CreateMailingList">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/CreateMailingList"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingLists">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingLists"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/DeleteMailingLists"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingListContacts"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SetMailingListContacts">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SetMailingListContacts"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AddUser">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/AddUser"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetGroups">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetGroups"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetUsers">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetUsers"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="DeleteUser">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/DeleteUser"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CreateMailing">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/CreateMailing"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingMessagesStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetCompanyMode">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetCompanyMode"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetBalance">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetBalance"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPartCount">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetPartCount"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetFormTemplates">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetFormTemplates"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetForms">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetForms"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendMessage">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessage"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageAtDate"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageWithValidityPeriod"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageToMultipleSubscribers"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessageToMultipleSubscribersAtDate"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessages">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessages"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesAtDate"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesWithValidityPeriod"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesAtDateWithValidityPeriod"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendVariousMessages">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendVariousMessages"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendViberMessages">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendViberMessages"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SendMessagesWithForm">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessagesWithForm"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessageStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessageStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessagesStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetViberMessagesStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessagesInfo"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessages">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessages"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetStatistics">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetStatistics"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CreateMailingList">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/CreateMailingList"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingLists">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingLists"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/DeleteMailingLists"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingListContacts"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SetMailingListContacts">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SetMailingListContacts"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="AddUser">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/AddUser"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetGroups">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetGroups"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetUsers">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetUsers"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="DeleteUser">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/DeleteUser"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CreateMailing">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/CreateMailing"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMailingMessagesStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetCompanyMode">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetCompanyMode"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetBalance">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetBalance"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetPartCount">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetPartCount"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetFormTemplates">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetFormTemplates"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetForms">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetForms"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet">
+		<operation name="SendMessage">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessages">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessages">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetStatistics">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingLists">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="AddUser">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetGroups">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetUsers">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="DeleteUser">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="CreateMailing">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetCompanyMode">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetBalance">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetPartCount">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetFormTemplates">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetForms">
+			<input/>
+			<output/>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost">
+		<operation name="SendMessage">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribers">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessageToMultipleSubscribersAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessages">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesAtDate">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="SendMessagesAtDateWithValidityPeriod">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetViberMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessagesInfo">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessages">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetStatistics">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingLists">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="DeleteMailingLists">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingListContacts">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="AddUser">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetGroups">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetUsers">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="DeleteUser">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="CreateMailing">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMailingMessagesStatus">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetCompanyMode">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetBalance">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetPartCount">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetFormTemplates">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetForms">
+			<input/>
+			<output/>
+		</operation>
+	</binding>
+	<service name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_API">
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+			<soapbind:address location="https://www.mcommunicator.ru/m2m/m2m_api.asmx"/>
+		</port>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12">
+			<soap12bind:address location="https://www.mcommunicator.ru/m2m/m2m_api.asmx"/>
+		</port>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"/>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"/>
+	</service>
+</definitions>

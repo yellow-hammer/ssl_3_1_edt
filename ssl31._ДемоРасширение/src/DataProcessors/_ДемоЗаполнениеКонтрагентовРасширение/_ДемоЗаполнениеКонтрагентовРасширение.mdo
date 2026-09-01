@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c8be6756-e172-4967-83b3-61c36351dd92">
+  <producedTypes>
+    <objectType typeId="f7efe0b0-ad4b-4cf3-ac23-cd408c3ef087" valueTypeId="e1bde229-2059-4d82-81cd-10df56aab795"/>
+    <managerType typeId="d1e8e073-c275-4d5e-a15c-f95eca39a79c" valueTypeId="6c368fde-bfa3-4031-be80-57efe57420b3"/>
+  </producedTypes>
+  <name>_ДемоЗаполнениеКонтрагентовРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Заполнение контрагентов (из расширения)</value>
+  </synonym>
+  <comment>Пример подключения команд заполнения через БСП</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor._ДемоЗаполнениеКонтрагентовРасширение.Form.ОсновнаяФорма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="1de48d66-32ac-4a12-b029-9b17b8a831f2">
+    <name>ДополнительнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительная форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8eafd232-7dcb-49ed-8d3a-8ddeae4b120d">
+    <name>ОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

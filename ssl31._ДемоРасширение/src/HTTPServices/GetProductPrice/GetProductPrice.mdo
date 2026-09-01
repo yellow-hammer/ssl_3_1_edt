@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b43ca6b3-efca-47cd-a531-dc8f878ba39e">
+  <name>GetProductPrice</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Получение цен (из расширения)</value>
+  </synonym>
+  <rootURL>v1/</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="12c577d5-d6cd-4765-a976-bd5c1e512aa3">
+    <name>Price</name>
+    <synonym>
+      <key>ru</key>
+      <value>Price</value>
+    </synonym>
+    <template>/Price/*</template>
+    <methods uuid="f9a5aba7-a654-4100-aa78-867cab4667b7">
+      <name>Get</name>
+      <synonym>
+        <key>ru</key>
+        <value>Get</value>
+      </synonym>
+      <handler>Цена</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="f5b0d89d-ddb8-4b9a-aedd-1d5bcbfb675f">
+    <name>Ping</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ping</value>
+    </synonym>
+    <template>/Ping/*</template>
+    <methods uuid="1a3d7a38-9c7a-4ecb-b702-006354cb204b">
+      <name>Get</name>
+      <synonym>
+        <key>ru</key>
+        <value>Get</value>
+      </synonym>
+      <handler>Проверка</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

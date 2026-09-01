@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4cad3e3f-e8b3-44bd-a159-57cac9c47d08">
+  <producedTypes>
+    <objectType typeId="5e5dabcb-55a4-4e05-88cb-52fb8a0e5252" valueTypeId="880459f0-8cb7-4f94-a643-5e68ceed7624"/>
+    <managerType typeId="61ada046-fee0-4d12-a29f-c5fdf1bee424" valueTypeId="7980d9f9-eea1-4aae-8d65-7e52c938a6e3"/>
+  </producedTypes>
+  <name>_ДемоПечатьСчетовНаОплатуПокупателюРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Печать счетов на оплату покупателю (из расширения)</value>
+  </synonym>
+  <comment>Пример подключения команд печати через БСП</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="c8a3590e-05b0-4534-932c-88925628c846">
+    <name>ПФ_MXL_СчетЗаказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет на оплату / заказ покупателя (из расширения)</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4bcb6f1-afc2-464e-af01-038624d119d6">
+  <producedTypes>
+    <objectType typeId="b41e6ec8-c65f-4e25-b0de-881661234d3f" valueTypeId="adc2b76d-1847-40f0-b888-cc008c37007c"/>
+    <refType typeId="858d1e2b-bc2e-4be2-b385-e76715e2b4c0" valueTypeId="4fe4cbd1-8e1c-4f89-911b-9c0a97354ee8"/>
+    <selectionType typeId="bbc756bb-ab98-4a84-8ab3-8c03c95a7801" valueTypeId="1b587894-a522-42c8-ae97-db64be0e8723"/>
+    <listType typeId="50f53e59-d3a7-43b7-bc8f-829ca7b77a46" valueTypeId="2c8e9810-1ad3-4af8-b523-731ea162ba93"/>
+    <managerType typeId="4b97f33d-061f-4e1d-956d-a55cb4bfba59" valueTypeId="9e57d90b-7382-40d9-8e7d-a61d4521f88f"/>
+    <extDimensionTypes typeId="55ce2032-44e7-4a25-86c9-cd3272a84d82" valueTypeId="e65885d4-4d39-4dde-8d9e-352c1bd1c0bc"/>
+    <extDimensionTypesRow typeId="c34ec38f-34d8-4a88-9676-9eb9631d3d54" valueTypeId="639986e4-92e9-4a64-aa3e-0d1414d40c69"/>
+  </producedTypes>
+  <name>_ДемоПланСчетовРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: План счетов (из расширения)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfAccounts._ДемоПланСчетовРасширение.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfAccounts._ДемоПланСчетовРасширение.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Демо: Счет (из расширения)</value>
+  </objectPresentation>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfAccounts>

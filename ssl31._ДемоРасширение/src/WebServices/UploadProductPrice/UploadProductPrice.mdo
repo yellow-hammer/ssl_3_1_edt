@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d05e7c1a-8fbb-4583-900a-70da182261d6">
+  <name>UploadProductPrice</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Установка цен (из расширения)</value>
+  </synonym>
+  <namespace>http://www.example.ssl.1c.ru</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage._ДемоУстановкаЦенПакетXDTOРасширение</value>
+  </xdtoPackages>
+  <descriptorFileName>ws1.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="6d2e9095-a8de-40b5-ac7e-938ff858beef">
+    <name>Upload</name>
+    <synonym>
+      <key>ru</key>
+      <value>Upload</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>УстановитьЦену</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="203c2b52-5251-4ca7-aa32-15f1a7304cea">
+      <name>ProductPrice</name>
+      <synonym>
+        <key>ru</key>
+        <value>Product price</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ProductPrice</name>
+        <nsUri>http://www.example.ssl.1c.ru</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="b773b13e-53bd-4f38-a94c-b0b9fefbdbe0">
+    <name>Ping</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ping</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Проверка</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+</mdclass:WebService>

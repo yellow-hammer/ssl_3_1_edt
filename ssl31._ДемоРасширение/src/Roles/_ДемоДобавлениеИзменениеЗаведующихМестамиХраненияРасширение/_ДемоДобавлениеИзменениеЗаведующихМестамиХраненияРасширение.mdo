@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1b139b1b-b49a-4864-9e7e-fb191b091a2d">
+  <name>_ДемоДобавлениеИзменениеЗаведующихМестамиХраненияРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Добавление и изменение заведующих местами хранения (из расширения)</value>
+  </synonym>
+  <comment>Добавлено ограничение прав доступа на регистр сведений _ДемоЗаведующиеМестамиХранения</comment>
+</mdclass:Role>

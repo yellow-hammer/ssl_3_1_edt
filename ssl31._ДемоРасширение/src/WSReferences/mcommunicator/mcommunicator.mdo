@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WSReference xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2776de8e-594b-4870-aa4d-92651fd79d9a">
+  <producedTypes>
+    <managerType typeId="1d6ac970-94cc-4e8d-ae11-ae0ed4ae2319" valueTypeId="8195dfde-887d-46a2-b8ff-453a2f16294d"/>
+  </producedTypes>
+  <name>mcommunicator</name>
+  <synonym>
+    <key>ru</key>
+    <value>mcommunicator</value>
+  </synonym>
+  <comment>Демо: Сервис отправки SMS от MTS</comment>
+  <locationURL>https://www.mcommunicator.ru/m2m/m2m_api.asmx?WSDL</locationURL>
+</mdclass:WSReference>

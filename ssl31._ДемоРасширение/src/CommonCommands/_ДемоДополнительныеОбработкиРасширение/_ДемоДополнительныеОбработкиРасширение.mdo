@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6bb9b361-c571-4df7-b64d-43eaf24fc35f">
+  <name>_ДемоДополнительныеОбработкиРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Дополнительные обработки раздела &quot;Расширение&quot;</value>
+  </synonym>
+  <comment>АПК:58 АПК:313</comment>
+  <group>NavigationPanelOrdinary</group>
+  <representation>Auto</representation>
+</mdclass:CommonCommand>

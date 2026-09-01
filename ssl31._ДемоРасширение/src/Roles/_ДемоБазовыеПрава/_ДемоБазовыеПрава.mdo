@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="262144f7-02b6-4906-89fd-297cc72fe383">
+  <name>_ДемоБазовыеПрава</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Базовые права (из расширения)</value>
+  </synonym>
+  <comment>АПК:58</comment>
+</mdclass:Role>

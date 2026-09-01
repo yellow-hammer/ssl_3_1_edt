@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="054d8ebe-c66f-466e-be4e-5a86d795c89a">
+  <producedTypes>
+    <refType typeId="a1848273-dd1c-4f10-af80-a787218d0588" valueTypeId="be59e2c4-52f9-4193-87a6-ab30a4a3f2c9"/>
+    <listType typeId="538c6140-276e-4eda-9ae5-3febb8195b9c" valueTypeId="5d856103-0541-416a-94f1-6d484dab29ad"/>
+    <managerType typeId="f5a2c239-8845-42d5-822a-4b8460af092d" valueTypeId="ea9a8c29-dbdb-4174-9e46-df43027df410"/>
+  </producedTypes>
+  <name>_ДемоЮридическоеФизическоеЛицо</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension"/>
+  <enumValues uuid="a27ab477-49a9-4d01-aa0e-b104d7b033e5">
+    <name>_ДемоИндивидуальныйПредпринимательРасширение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Демо: Индивидуальный предприниматель (из расширения)</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <synonym>Extended</synonym>
+    </extension>
+  </enumValues>
+</mdclass:Enum>

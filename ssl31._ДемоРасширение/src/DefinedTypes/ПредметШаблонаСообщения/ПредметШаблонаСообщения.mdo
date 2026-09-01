@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DefinedType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="39f7ba80-2e08-4fb5-a408-20cb020108c1" extendedConfigurationObject="08fe5e70-ac6b-427a-b6f2-0e2f7848fa6b">
+  <producedTypes>
+    <containerType typeId="3e88b579-144a-4df5-9eb1-a0ce436c4c4a" valueTypeId="ab48e11a-a288-47bd-8cbd-9bd1b8a6336a"/>
+  </producedTypes>
+  <name>ПредметШаблонаСообщения</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DefinedTypeExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <typeExtension>
+      <types>
+        <state>Extended</state>
+        <type>DocumentRef._ДемоОперация</type>
+      </types>
+    </typeExtension>
+  </extension>
+</mdclass:DefinedType>

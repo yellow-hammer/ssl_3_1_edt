@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:StyleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7d3c7d6b-5286-4ece-b7d4-aebcef3465c7">
+  <name>_ДемоРабочийСегментПартнеровШрифтРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Рабочий сегмент партнеров шрифт (из расширения)</value>
+  </synonym>
+  <type>Font</type>
+  <value xsi:type="core:FontValue">
+    <value xsi:type="core:FontRef">
+      <font>System.DefaultGUIFont</font>
+      <height>9.0</height>
+      <bold>true</bold>
+      <italic>false</italic>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+    </value>
+  </value>
+</mdclass:StyleItem>

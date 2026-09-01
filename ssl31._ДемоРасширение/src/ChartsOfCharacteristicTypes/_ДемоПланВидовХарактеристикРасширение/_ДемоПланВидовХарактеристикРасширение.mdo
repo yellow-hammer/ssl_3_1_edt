@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCharacteristicTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ccd2ed5a-2ebf-4f6e-ab3c-e58688e50d5b">
+  <producedTypes>
+    <objectType typeId="99fda9e8-c1cf-40ca-8b56-a563bdf769c4" valueTypeId="6e625e09-1314-4d40-93bd-a34cd2dff32b"/>
+    <refType typeId="61adef16-7b27-47b0-84a0-39a6ce297f1e" valueTypeId="1135b23e-319b-4d84-bec9-6a4901ecfb3c"/>
+    <selectionType typeId="a7ddaa96-b891-4819-b6e0-b625c6abf4b6" valueTypeId="46f87841-a414-4d37-83df-7fd9f98b42b8"/>
+    <listType typeId="8451934b-5c29-4543-8530-1564c49ecb4b" valueTypeId="a1a952e9-aa05-4b92-9d2b-9a0f344873e5"/>
+    <managerType typeId="b5b0012a-47a8-4335-b640-6446bb87fa3a" valueTypeId="41e7d2af-d4f7-4277-b202-5b5d8dd60035"/>
+    <containerType typeId="d5c82e1e-69ab-4094-9bd3-a84275bc725b" valueTypeId="3b73a088-146e-4ad1-83a2-b2fecd4d2667"/>
+  </producedTypes>
+  <name>_ДемоПланВидовХарактеристикРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: План видов характеристик (из расширения)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfCharacteristicTypes._ДемоПланВидовХарактеристикРасширение.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfCharacteristicTypes._ДемоПланВидовХарактеристикРасширение.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Демо: Вид характеристики (из расширения)</value>
+  </objectPresentation>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>10</length>
+    </stringQualifiers>
+  </type>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <descriptionLength>25</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfCharacteristicTypes>

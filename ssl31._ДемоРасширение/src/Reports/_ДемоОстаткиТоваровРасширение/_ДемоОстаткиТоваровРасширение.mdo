@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2d480305-7a1d-488b-a803-3be9764c41c0">
+  <producedTypes>
+    <objectType typeId="8165806a-4c28-4c26-8f06-d25c2b2d84e3" valueTypeId="253c3b62-997d-44eb-9948-c8711ccdc591"/>
+    <managerType typeId="af6e70f1-2aaf-41eb-80ca-473795502480" valueTypeId="6fed10b3-26e8-4c81-89d3-b8cc7a0dbf5f"/>
+  </producedTypes>
+  <name>_ДемоОстаткиТоваровРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Остатки товаров (из расширения)</value>
+  </synonym>
+  <comment>Пример интеграции отчета расширения с БСП</comment>
+  <mainDataCompositionSchema>Report._ДемоОстаткиТоваровРасширение.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <templates uuid="f566f942-7911-4466-8756-9e7790ea00e7">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="728c5182-74bf-4b28-9f06-72c077ac6807">
+    <name>_ДемоОстаткиТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Демо: Остатки товаров (из расширения)</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

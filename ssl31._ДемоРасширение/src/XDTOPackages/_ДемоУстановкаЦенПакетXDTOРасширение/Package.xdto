@@ -1,0 +1,11 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.example.ssl.1c.ru">
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise/current-config"/>
+	<objectType name="Product">
+		<property name="ID" type="xs:string"/>
+		<property name="Price" type="xs:integer"/>
+	</objectType>
+	<objectType name="ProductPrice">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Type" type="d3p1:EnumRef._ДемоТипУстановкиЦеныРасширение"/>
+		<property xmlns:d3p1="http://www.example.ssl.1c.ru" name="Products" type="d3p1:Product" lowerBound="0"/>
+	</objectType>
+</package>

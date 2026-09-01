@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2ef1aa25-7143-4d8d-be10-ebc11842d20e">
+  <name>_ДемоРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расширение</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture._ДемоРазделИнтегрируемыеПодсистемы</picture>
+  </picture>
+  <content>Report._ДемоОстаткиТоваровРасширение</content>
+  <content>DataProcessor._ДемоЗаполнениеКонтрагентовРасширение</content>
+  <content>DataProcessor._ДемоПечатьСчетовНаОплатуПокупателюРасширение</content>
+  <content>CommonCommand._ДемоПанельОтчетовРасширение</content>
+  <content>Role.Подсистема_ДемоРасширение</content>
+  <content>Role._ДемоДобавлениеИзменениеЗаведующихМестамиХраненияРасширение</content>
+  <content>Enum._ДемоТипУстановкиЦеныРасширение</content>
+  <content>HTTPService.GetProductPrice</content>
+  <content>WSReference.mcommunicator</content>
+  <content>CommandGroup._ДемоСегментыРасширение</content>
+  <content>CommonPicture._ДемоЛоготипБСП</content>
+  <content>CommonTemplate.ПФ_MXL_ГарантийноеПисьмо</content>
+  <content>XDTOPackage._ДемоУстановкаЦенПакетXDTOРасширение</content>
+  <content>SessionParameter._ДемоРабочийСегментПартнераРасширение</content>
+  <content>Style._ДемоСтильРасширения</content>
+  <content>StyleItem._ДемоРабочийСегментПартнеровШрифтРасширение</content>
+  <content>DataProcessor._ДемоПечатьСписанийТоваровOpenOfficeXMLРасширение</content>
+  <content>CommonCommand._ДемоДополнительныеОбработкиРасширение</content>
+  <subsystems>Использование</subsystems>
+</mdclass:Subsystem>

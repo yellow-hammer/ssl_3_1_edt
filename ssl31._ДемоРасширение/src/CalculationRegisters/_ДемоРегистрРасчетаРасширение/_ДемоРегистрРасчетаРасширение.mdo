@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CalculationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8372541b-54da-4b24-8e75-443954748d88">
+  <producedTypes>
+    <selectionType typeId="37cb693c-fa71-4585-a38f-ba6d1355ebfd" valueTypeId="f78c242d-40c9-4637-8cff-36fc0291e83b"/>
+    <listType typeId="f67550e9-0991-4a10-a2d7-58abe9136d47" valueTypeId="bb5da677-f191-42c4-a4bb-bed2fcea8602"/>
+    <managerType typeId="10701679-0614-43fc-8d67-a2656a4c3534" valueTypeId="7c1684bd-3382-4100-9422-78a74770b2cf"/>
+    <recordSetType typeId="f4f52aa1-66a6-43ad-acbe-a286bcf0e791" valueTypeId="cd6cc002-5e1b-441a-9b4a-7a522664724d"/>
+    <recordKeyType typeId="7e9574e0-64c1-4e87-bdda-4c09992c3a3d" valueTypeId="aa1e97ac-1ad8-44da-82c4-2c82df2bdc2e"/>
+    <recordType typeId="8b7a6a56-0dc2-47b3-9c7a-85759cf72a4d" valueTypeId="a82e7482-43ce-40e4-9550-b95dadd15e9e"/>
+    <recalcsType typeId="63bf83ce-3d29-468f-bc59-d080c285c926" valueTypeId="83be0131-f0ef-4f9f-9acb-b76d7955004b"/>
+  </producedTypes>
+  <name>_ДемоРегистрРасчетаРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Регистр расчета (из расширения)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <periodicity>Month</periodicity>
+  <chartOfCalculationTypes>ChartOfCalculationTypes._ДемоПланВидовРасчетаРасширение</chartOfCalculationTypes>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bd5907c3-87cd-4c47-9853-fa6f3ae9ec19">
+    <name>Амортизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Амортизация</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="7614039b-dffd-446e-83ff-5c55e098b53c">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef._ДемоНоменклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+</mdclass:CalculationRegister>

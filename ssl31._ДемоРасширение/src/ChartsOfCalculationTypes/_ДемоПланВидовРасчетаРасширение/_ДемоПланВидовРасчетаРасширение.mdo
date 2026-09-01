@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCalculationTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e53b867-3432-4c5f-a055-a94e21f60dbf">
+  <producedTypes>
+    <objectType typeId="78adbe87-79aa-439c-ab2d-7e2b96819653" valueTypeId="e9de62f4-c51b-41eb-8755-7ceba1243dbb"/>
+    <refType typeId="09f8db57-ed64-4241-b685-b37e2ddc0e6a" valueTypeId="5a494b20-a959-4d62-b9ee-2002176a5c6a"/>
+    <selectionType typeId="6146fd5a-f3b9-4aba-9cfa-c17a1c471c0c" valueTypeId="e4650c73-3c6a-45a2-9c61-3eab81a47db0"/>
+    <listType typeId="661edddf-fcc9-4c46-a7bf-8c391ea4024f" valueTypeId="7e2d0097-a4b7-4f11-8a93-4130ee06d437"/>
+    <managerType typeId="602ec33c-8fb2-45ed-9b8e-411ffbcd35f3" valueTypeId="130d7903-d59b-4bf3-ba94-fe4c1b277c89"/>
+    <displacingCalculationTypesType typeId="36f42002-8f8c-4e64-b4a1-5026d4be1d39" valueTypeId="3b43d9ec-ce80-40ca-a339-ff4263cb98d2"/>
+    <displacingCalculationTypesRowType typeId="4035aa1f-b121-48e4-a42a-22df62d410fc" valueTypeId="863a6951-23f6-4723-ba73-e3b04714bfda"/>
+    <baseCalculationTypesType typeId="837ebcf8-98d3-4e18-8453-79c1473edd57" valueTypeId="50bb9577-9874-481c-97a3-725c069a5126"/>
+    <baseCalculationTypesRowType typeId="5ec93420-4787-47e3-8158-c844489d6d6d" valueTypeId="df126e53-c114-443c-a341-8145bd901d2e"/>
+    <leadingCalculationTypesType typeId="400171d4-7222-4c90-afc4-6b79438a6318" valueTypeId="8a319adb-a8d5-4c00-a3ff-9b48a98457c6"/>
+    <leadingCalculationTypesRowType typeId="bce6db0c-1dbe-4159-a610-3e1e96a4d074" valueTypeId="32a884f8-a25e-4dda-8412-4eac1931c9ee"/>
+  </producedTypes>
+  <name>_ДемоПланВидовРасчетаРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: План видов расчета (из расширения)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfCalculationTypes._ДемоПланВидовРасчетаРасширение.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfCalculationTypes._ДемоПланВидовРасчетаРасширение.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Демо: Вид расчета (из расширения)</value>
+  </objectPresentation>
+  <codeLength>9</codeLength>
+  <descriptionLength>40</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfCalculationTypes>

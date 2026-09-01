@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="edbe9cc3-36d6-4664-8f12-56062e63fd72">
+  <name>ПодключаемыеОтчетыИОбработки</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:SubsystemExtension">
+    <content>Extended</content>
+    <commandInterface>Extended</commandInterface>
+  </extension>
+  <content>DataProcessor._ДемоЗаполнениеКонтрагентовРасширение</content>
+  <content>DataProcessor._ДемоПечатьСчетовНаОплатуПокупателюРасширение</content>
+  <content>Report._ДемоОстаткиТоваровРасширение</content>
+  <content>DataProcessor._ДемоПечатьСписанийТоваровOpenOfficeXMLРасширение</content>
+</mdclass:Subsystem>

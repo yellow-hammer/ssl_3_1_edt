@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f449edb-f557-4b4c-9896-a0ec43667ac9">
+  <producedTypes>
+    <refType typeId="362e38c9-d05e-4d48-a1fb-ee7a9343ac0f" valueTypeId="521dc4d4-975a-4fd4-9bfb-6be2d3718271"/>
+    <listType typeId="005eeda9-38de-4f59-b6b1-1ed25068acc4" valueTypeId="3ea326cc-400b-463b-b665-943b41cfced6"/>
+    <managerType typeId="2780808e-b036-481a-98e6-3490ef0b6bd7" valueTypeId="35bc58ea-1ae6-435f-8add-084a2fa0ae49"/>
+  </producedTypes>
+  <name>_ДемоТипУстановкиЦеныРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Тип установки цены (из расширения)</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="4baf44a7-0083-4575-b211-1228bb63859a">
+    <name>Предварительная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предварительная</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="795076d0-f0a0-4836-8f76-b2a202f781ac">
+    <name>Рабочая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочая</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

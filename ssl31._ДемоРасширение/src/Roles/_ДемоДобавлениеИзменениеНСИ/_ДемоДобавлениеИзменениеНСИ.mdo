@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="fc4ac0a6-f666-41e4-946e-0262b7b25e33">
+  <name>_ДемоДобавлениеИзменениеНСИ</name>
+  <comment>Добавлены права с ограничением на справочник и регистр сведений _ДемоСегментыПартнеров</comment>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:RoleExtension">
+    <rights>Extended</rights>
+  </extension>
+</mdclass:Role>

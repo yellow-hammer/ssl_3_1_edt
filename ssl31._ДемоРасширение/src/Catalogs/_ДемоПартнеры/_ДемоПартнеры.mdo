@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="3014d9c1-cb00-49fb-81b3-e8ced354975f">
+  <producedTypes>
+    <objectType typeId="31fe70b8-8268-4f5c-8326-d73541b35fc7" valueTypeId="4457634e-b1ff-422c-a9a5-5d08657404c8"/>
+    <refType typeId="53aa5507-8792-43fa-b077-418c5f5e73d5" valueTypeId="bc2ba2fa-9db8-4467-936c-8bbbfa975afb"/>
+    <selectionType typeId="19019250-d2a1-469d-8d95-114a23ecb73b" valueTypeId="879586de-cbdd-4fb8-a5bb-28ad21a3a445"/>
+    <listType typeId="5ac54920-44e8-49e8-89ac-2a5f356e9d4a" valueTypeId="a6a44fe2-91ac-4d34-b12b-ef5e5a5d4972"/>
+    <managerType typeId="06c22533-d3d8-4d2c-afad-5b20f033ece2" valueTypeId="49f74e92-1ac6-4df5-909c-1706e70517ef"/>
+  </producedTypes>
+  <name>_ДемоПартнеры</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <codeLength>Checked</codeLength>
+    <codeAllowedLength>Checked</codeAllowedLength>
+    <descriptionLength>Checked</descriptionLength>
+    <codeType>Checked</codeType>
+  </extension>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <attributes uuid="523d19b5-0dd0-4377-9e32-3b28b327d814">
+    <name>ВидПартнера</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+  <attributes uuid="39e61ad4-d7ea-4829-9ee6-697c44063695">
+    <name>Конкурент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+  <attributes uuid="2567d728-2d7d-419c-88eb-a8f504204d3f">
+    <name>Поставщик</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+  <attributes uuid="66180705-bbbf-48aa-ba5b-945edeeffba6">
+    <name>ГруппаДоступа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+  <attributes uuid="558e76c6-6ad0-479a-935d-64f823d428f5">
+    <name>Клиент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+  <attributes uuid="7513997a-2d5b-4500-ac76-5bc312727f14">
+    <name>ПрочиеОтношения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <typeExtension/>
+    </extension>
+  </attributes>
+</mdclass:Catalog>

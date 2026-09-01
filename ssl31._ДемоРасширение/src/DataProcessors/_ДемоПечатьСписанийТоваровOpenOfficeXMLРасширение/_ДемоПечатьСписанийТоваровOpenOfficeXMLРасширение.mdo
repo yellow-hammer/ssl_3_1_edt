@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6cd2b31-bf16-4b76-9d00-5f0b7d0a5412">
+  <producedTypes>
+    <objectType typeId="588812ba-3168-4e3c-931a-0d1032bb114d" valueTypeId="7eebcfb1-3129-40f3-88bd-0a75816de35d"/>
+    <managerType typeId="8ed6190a-26a8-4452-9014-ef6f87a6c15c" valueTypeId="5811c13a-5196-44e6-bcc1-4949d97428ae"/>
+  </producedTypes>
+  <name>_ДемоПечатьСписанийТоваровOpenOfficeXMLРасширение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Демо: Печать списаний товаров Open Office XML (из расширения)</value>
+  </synonym>
+  <comment>АПК:58</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <templates uuid="d10a7563-7bdd-4a47-bfb2-5c214ffb6851">
+    <name>ПФ_DOC_СписаниеТоваров_ru</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание товаров (документ Office Open XML)</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+</mdclass:DataProcessor>
