@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6db0c97f-08d8-4978-8250-d42e7c7a64f8">
+  <name>ГенерацияКода</name>
+  <synonym>
+    <key>ru</key>
+    <value>Генерация кода</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>DataProcessor.ЮТГенераторКода</content>
+  <content>DataProcessor.ЮТГенераторКодаТестовыхДанных</content>
+  <content>DataProcessor.ЮТПомощникДляСозданияТестовыхДанных</content>
+  <content>DataProcessor.ЮТРедакторМакетаСТестовымиДанными</content>
+  <parentSubsystem>Subsystem.ЮТПубличный</parentSubsystem>
+</mdclass:Subsystem>

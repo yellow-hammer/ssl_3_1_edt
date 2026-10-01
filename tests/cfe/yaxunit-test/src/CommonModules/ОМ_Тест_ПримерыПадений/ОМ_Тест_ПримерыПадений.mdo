@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7b282a43-2c52-4088-9345-331dfeafcc69">
+  <name>ОМ_Тест_ПримерыПадений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тесты: примеры падений</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

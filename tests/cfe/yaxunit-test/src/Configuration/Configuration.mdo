@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4fa8f83e-d765-4fc8-979f-9e5de91b28b0">
+  <name>Тесты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тесты YAxUnit</value>
+  </synonym>
+  <comment>Примеры модульных тестов YAxUnit</comment>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ConfigurationExtension"/>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="bbaef6f8-4f91-4432-83d1-ba9a799b9b97"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="ffe475ac-a9e5-496f-919c-ca3265159482"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="5ffcb9f7-1090-46da-aa61-c76f12409ab3"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="c1d05a4e-d4a1-4a3a-a5e7-68bd7e0cf0a6"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="f344b581-4ca0-4975-ab1e-e7775d67b8ea"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="04c8f9f6-d5fc-4132-a01a-3fe298aedbe2"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="83760bca-16ec-4e8b-ad01-a929ade8576c"/>
+  <namePrefix>ОМ_</namePrefix>
+  <configurationExtensionCompatibilityMode>8.3.21</configurationExtensionCompatibilityMode>
+  <configurationExtensionPurpose>AddOn</configurationExtensionPurpose>
+  <scriptVariant>Russian</scriptVariant>
+  <version>1.0.0.1</version>
+  <languages uuid="6d4d1a6e-131d-4d04-a1d5-4801e3a795b8">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:LanguageExtension">
+      <synonym>Extended</synonym>
+      <languageCode>Checked</languageCode>
+    </extension>
+    <languageCode>ru</languageCode>
+  </languages>
+  <commonModules>CommonModule.ОМ_Тест_Арифметика</commonModules>
+  <commonModules>CommonModule.ОМ_Тест_РаботаСоСтроками</commonModules>
+  <commonModules>CommonModule.ОМ_Тест_ПримерыПадений</commonModules>
+</mdclass:Configuration>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2c0bd8f0-85ba-437c-ac6b-d1f27cfbc2da">
+  <name>ОМ_Тест_Арифметика</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тесты: арифметика</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>
